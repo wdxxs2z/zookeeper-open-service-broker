@@ -1,0 +1,42 @@
+security:
+  user:
+    name: ${SERVICE_BROKER_USERNAME:admin}
+    password: ${SERVICE_BROKER_PASSWORD:123.com}
+    
+zk:
+  hosts: ${ZK_HOSTS:127.0.0.1:2181}
+  adminauth: ${ZK_SUPER_AUTH:super:admin}
+    
+cloudfoundry:
+  servicebroker:
+    catalog:
+      services:
+        - name: zookeeper-service-broker
+          id: eef2c9d7-d7df-4abe-b951-f88353dd5d71
+          description: This is zookeeper service broker,support 3.4
+          bindable: true
+          plan_updatable: true
+          tags:
+          - zookeeper
+          - zk
+          metadata:
+            displayName: Zookeeper Service
+            imageUrl: https://zookeeper.apache.org/images/zookeeper_small.gif
+            longDescription: Zookeeper Service Broker
+            providerDisplayName: Zookeeper Service Broker
+            documentationUrl: https://github.com/wdxxs2z
+            supportUrl: https://github.com/wdxxs2z
+          plans:
+            - name: free
+              id: ca65a33f-6272-4cac-b973-07f0da59f998
+              bindable: true
+              free: true
+              description: Zookeeper service broker shared.
+              metadata:
+                costs:
+                  - amount:
+                      usd: 0.0
+                    unit: MONTHLY
+                bullets:
+                  - Shared ZK server
+                  - 40 concurrent connections (not enforced)
