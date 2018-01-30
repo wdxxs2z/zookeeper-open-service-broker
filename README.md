@@ -1,5 +1,17 @@
 # Zookeeper Service Broker Example
 
+## Design
+
+* Zookeeper has a super user and manage the service register metadata,any other users never modify this metadata.
+```
+|-/service-instance-id
+|
+|--/zookeeper-service
+|---/service-instance-id
+|----/auth
+|----/service-bind-id
+```
+
 ## Configuration
 
 1.Make sure your zookeeper open digest auth: super:admin
@@ -29,3 +41,24 @@ cf create-service zookeeper-service-broker free zk-example -c "{"username": "myu
 cf bind-service app_name zk-example
 ```
 6.Check your application environment
+```
+"zookeeper-service-broker": [
+    {
+      "credentials": {
+        "auth": "tony:DuU4dHG2B3RC0JrOsOJWwLfIJ74=",
+        "zookeeper_data_dir": "/504162d9-3ded-4f17-b831-25052f1e6818",
+        "zookeeper_hosts": "10.10.130.19:2181"
+      },
+      "syslog_drain_url": null,
+      "volume_mounts": [],
+      "label": "zookeeper-service-broker",
+      "provider": null,
+      "plan": "free",
+      "name": "zkj",
+      "tags": [
+        "zookeeper",
+        "zk"
+      ]
+    }
+ ]
+```
