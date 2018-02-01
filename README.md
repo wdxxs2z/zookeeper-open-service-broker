@@ -6,10 +6,10 @@
 ```
 |-/service-instance-id
 |
-|--/zookeeper-service
-|---/service-instance-id
-|----/auth
-|----/service-bind-id
+|-/zookeeper-service
+|--/service-instance-id
+|---/auth
+|---/service-bind-id
 ```
 
 ## Configuration
@@ -21,10 +21,10 @@
 2.Push our zookeeper to cloudfoundry or kubernetes.
 ```
 cf push zk-broker --no-start
-cf set-env ZK_HOSTS 127.0.0.1:2181
-cf set-env ZK_SUPER_AUTH super:admin
-cf set-env SERVICE_BROKER_USERNAME admin
-cf set-env SERVICE_BROKER_PASSWORD changeme
+cf set-env zk-broker ZK_HOSTS 127.0.0.1:2181
+cf set-env zk-broker ZK_SUPER_AUTH super:admin
+cf set-env zk-broker SERVICE_BROKER_USERNAME admin
+cf set-env zk-broker SERVICE_BROKER_PASSWORD changeme
 cf start zk-broker
 ```
 3.Create service-broker and access the free plan
