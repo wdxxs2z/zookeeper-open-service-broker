@@ -1,5 +1,8 @@
 FROM maven:3.5-jdk-8-alpine
 
+RUN apk --update add git openssh && \
+    rm -rf /var/lib/apt/lists/* && \
+    rm /var/cache/apk/*
 RUN git clone https://github.com/wdxxs2z/zookeeper-open-service-broker
 WORKDIR zookeeper-open-service-broker
 RUN mvn clean install
