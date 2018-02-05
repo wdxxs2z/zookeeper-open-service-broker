@@ -12,7 +12,7 @@ cloudfoundry:
     catalog:
       services:
         - name: zookeeper-service-broker
-          id: eef2c9d7-d7df-4abe-b951-f88353dd5d71
+          id: ${ZK_SERVICE_ID:eef2c9d7-d7df-4abe-b951-f88353dd5d71}
           description: This is zookeeper service broker,support 3.4
           bindable: true
           plan_updatable: true
@@ -28,7 +28,7 @@ cloudfoundry:
             supportUrl: https://github.com/wdxxs2z
           plans:
             - name: free
-              id: ca65a33f-6272-4cac-b973-07f0da59f998
+              id: ${ZK_FREE_PLAN_ID:ca65a33f-6272-4cac-b973-07f0da59f998}
               bindable: true
               free: true
               description: Zookeeper service broker shared.

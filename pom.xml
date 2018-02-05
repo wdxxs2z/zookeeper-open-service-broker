@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.wdxxs2z</groupId>
-	<artifactId>wdxxs2z.boot</artifactId>
+	<artifactId>servicebroker-zookeeper</artifactId>
 	<version>1.0.3</version>
 	<packaging>jar</packaging>
 
-	<name>service-broker-example</name>
-	<description>service demo</description>
+	<name>zookeeper service broker</name>
+	<description>service broker demo</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

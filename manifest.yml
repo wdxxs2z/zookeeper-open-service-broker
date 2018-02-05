@@ -1,0 +1,13 @@
+---
+applications:
+- name: zookeeper-broker
+  memory: 1G
+  instances: 1
+  path: target/servicebroker-zookeeper-1.0.3.jar
+  env:
+    SERVICE_BROKER_USERNAME: admin
+    SERVICE_BROKER_PASSWORD: changeme
+    ZK_HOSTS: 127.0.0.1:2181
+    ZK_SUPER_AUTH: super:admin
+    ZK_SERVICE_ID: eef2c9d7-d7df-4abe-b951-f88353dd5d71
+    ZK_FREE_PLAN_ID: ca65a33f-6272-4cac-b973-07f0da59f998

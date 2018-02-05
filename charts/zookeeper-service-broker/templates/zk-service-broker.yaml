@@ -1,0 +1,11 @@
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ClusterServiceBroker
+metadata:
+  name: {{ template "fullname" . }}
+spec:
+  url: http://zookeeper-service-broker-zk.default.svc.cluster.local
+  authInfo:
+    basic:
+      secretRef:
+        namespace: default
+        name: {{ template "fullname" . }}
