@@ -1,4 +1,4 @@
-FROM 3.5-jdk-8-alpine
+FROM maven:3.5-jdk-8-alpine
 RUN mvn clean install
 COPY target/*.jar /app.jar
 RUN sh -c 'touch /app.jar'
