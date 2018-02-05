@@ -8,9 +8,7 @@ RUN git clone https://github.com/wdxxs2z/zookeeper-open-service-broker
 WORKDIR zookeeper-open-service-broker
 RUN mvn clean install
 
-RUN ls -laht
-
-COPY /zookeeper-open-service-broker/target/*.jar /app.jar
+COPY ./target/*.jar /app.jar
 RUN sh -c 'touch /app.jar'
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
 EXPOSE 8080
