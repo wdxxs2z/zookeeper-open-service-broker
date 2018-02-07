@@ -13,7 +13,7 @@ data:
     zk:
       hosts: zookeeper-service.default.svc.cluster.local:2181
       adminauth: ${ZOOKEEPER_AUTH:super:admin}
-    cloudfoundry:
+    paas:
       servicebroker:
         catalog:
           services:

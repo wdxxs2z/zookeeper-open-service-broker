@@ -1,9 +1,9 @@
 # Default values for User-Provided Service Broker
 # Image to use
-image: wdxxs2z/zookeeper-open-service-broker:0.0.3
+image: wdxxsez/zookeeper-open-service-broker:0.0.3
 # ImagePullPolicy; valid values are "IfNotPresent", "Never", and "Always"
 imagePullPolicy: IfNotPresent
 
 username: admin
 password: changeme
-zookeeperAuth: super:admin 
+zookeeperAuth: super:admin

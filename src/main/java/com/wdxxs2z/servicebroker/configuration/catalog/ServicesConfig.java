@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 @JsonAutoDetect(getterVisibility = JsonAutoDetect.Visibility.NONE)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Configuration
-@ConfigurationProperties(prefix = "cloudfoundry.servicebroker.catalog")
+@ConfigurationProperties(prefix = "paas.servicebroker.catalog")
 public class ServicesConfig {
 
     @JsonSerialize(nullsUsing = EmptyListSerializer.class)

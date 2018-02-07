@@ -7,7 +7,7 @@ zk:
   hosts: ${ZK_HOSTS:127.0.0.1:2181}
   adminauth: ${ZK_SUPER_AUTH:super:admin}
     
-cloudfoundry:
+paas:
   servicebroker:
     catalog:
       services:
